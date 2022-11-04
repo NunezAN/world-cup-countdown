@@ -20,14 +20,16 @@ const Timer = () => {
     const timerMinutes = parseInt((expirationTimer / (1000 * 60)) % 60);
     const timerSeconds = parseInt((expirationTimer / 1000) % 60);
 
-    return `${timerDays < 10 ? "0" + timerDays : timerDays}d ${timerHours < 10 ? "0" + timerHours : timerHours}h ${
-      timerMinutes < 10 ? "0" + timerMinutes : timerMinutes
-    }m ${timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}s`;
+    return <span>
+    {timerDays < 10 ? "0" + timerDays : timerDays}<span className="text-[#E5C685]">d</span> {timerHours < 10 ? "0" + timerHours : timerHours}<span className="text-[#E5C685]">h</span> {
+        timerMinutes < 10 ? "0" + timerMinutes : timerMinutes
+    }<span className="text-[#E5C685]">m</span> {timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}<span className="text-[#E5C685]">s</span>
+    </span>
   };
   startTimer();
   return (
     <div>
-     <span className="text-7xl">{startTimer()}</span>
+     <span className="text-4xl md:text-6xl font-bold">{startTimer()}</span>
     </div>
   );
 };

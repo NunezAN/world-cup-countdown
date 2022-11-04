@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Timer from "./component/Timer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-[#7F1431] text-white h-screen flex">
+      <body className="max-w-7xl m-auto text-center space-y-8">
+        <h1 className="text-6xl font-bold tracking-wide">Countdown To The World Cup! </h1>
+        <Timer />
+        <h3 className="text-black font-bold text-4xl tracking-wide">Created By: Alex Nunez</h3>
+      </body>
     </div>
   );
 }
